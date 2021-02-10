@@ -1,83 +1,83 @@
 .nav {
-display: flex;
-position: flex;
-justify-content: flex-end; /* разместим справа */
-background: #fff;
+    display: flex;
+    position: flex;
+    justify-content: flex-end; /* разместим справа */
+    background: #fff;
 }
 .nav a {
-color: #000;
-padding: 15px 10px;
-text-decoration: none;
-text-align: center;
+    color: #000;
+    padding: 15px 10px;
+    text-decoration: none;
+    text-align: center;
 }
 
 #checkbox {
-  opacity: 0;
+    opacity: 0;
 }
 /* стилизуем кнопку */
 .toggle-button {
-  display: flex; /* используем flex для центрирования содержимого */
-  align-items: center;  /* центрируем содержимое кнопки */
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 1;
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
 }
 /* добавляем "гамбургер" */
 .toggle-button > span,
 .toggle-button > span::before,
 .toggle-button > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #616161;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
 }
 .toggle-button > span::before {
-  content: '';
-  top: -8px;
+    content: '';
+    top: -8px;
 }
 .toggle-button > span::after {
-  content: '';
-  top: 8px;
+    content: '';
+    top: 8px;
 }
 @media all and (max-width: 1400px) {
-  .nav {
-    justify-content: space-around;
-  }
-  .nav a {
-    flex-grow:1; /* растягиваться на всю ширину */
-  }
-  .toggle-button {
-    visibility: hidden;
-  }
+    .nav {
+        justify-content: space-around;
+    }
+    .nav a {
+        flex-grow:1; /* растягиваться на всю ширину */
+    }
+    .toggle-button {
+        visibility: hidden;
+    }
 }
 /* меньше 500px */
 @media all and (max-width: 500px) {
-  .nav {
-    flex-direction: column;
-    visibility: hidden;
-  }
-  .toggle-button {
-    visibility: visible;
-  }
+    .nav {
+        flex-direction: column;
+        visibility: hidden;
+    }
+    .toggle-button {
+        visibility: visible;
+    }
 }
 
 #checkbox:checked ~ .toggle-button > span {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 #checkbox:checked ~ .toggle-button > span::before {
-  top: 0;
-  transform: rotate(0);
+    top: 0;
+    transform: rotate(0);
 }
 #checkbox:checked ~ .toggle-button > span::after {
-  top: 0;
-  transform: rotate(90deg);
+    top: 0;
+    transform: rotate(90deg);
 }
 #checkbox:checked ~ .nav {
-  visibility: visible;
-  left: 0;
+    visibility: visible;
+    left: 0;
 }
